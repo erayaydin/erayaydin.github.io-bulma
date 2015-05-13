@@ -1,0 +1,45 @@
+---
+layout: page
+title: "İletişim"
+description: "Bir sorun mu var? Cevabım da var (belki)."
+header-img: "media/iletisim.jpg"
+---
+
+<p>Benimle iletişime mi geçmek istiyorsunuz? Bana mesaj yollamak için aşağıdaki formu doldurun ve size en kısa sürede dönüş yapayım. (24 saat içerisinde)</p>
+<form name="sentMessage" id="contactForm" novalidate>
+    <div class="row control-group">
+        <div class="form-group col-xs-12 floating-label-form-group controls">
+            <label>İsminiz</label>
+            <input type="text" class="form-control" placeholder="İsminiz" id="name" required data-validation-required-message="Lütfen isminizi girin.">
+            <p class="help-block text-danger"></p>
+        </div>
+    </div>
+    <div class="row control-group">
+        <div class="form-group col-xs-12 floating-label-form-group controls">
+            <label>E-Posta Adresiniz</label>
+            <input type="email" class="form-control" placeholder="E-Posta Adresiniz" id="email" required data-validation-required-message="Lütfen e-posta adresinizi girin.">
+            <p class="help-block text-danger"></p>
+        </div>
+    </div>
+    <div class="row control-group">
+        <div class="form-group col-xs-12 floating-label-form-group controls">
+            <label>Telefon Numaranız</label>
+            <input type="tel" class="form-control" placeholder="Telefon Numaranız" id="phone" required data-validation-required-message="Lütfen telefon numaranızı girin.">
+            <p class="help-block text-danger"></p>
+        </div>
+    </div>
+    <div class="row control-group">
+        <div class="form-group col-xs-12 floating-label-form-group controls">
+            <label>Mesajınız</label>
+            <textarea rows="5" class="form-control" placeholder="Mesajınızı girin. Lütfen olabildiğince detaylı açıklama yapınız." id="message" required data-validation-required-message="Lütfen mesajınızı girin."></textarea>
+            <p class="help-block text-danger"></p>
+        </div>
+    </div>
+    <br>
+    <div id="success"></div>
+    <div class="row">
+        <div class="form-group col-xs-12">
+            <button type="submit" class="btn btn-default">Gönder</button>
+        </div>
+    </div>
+</form>

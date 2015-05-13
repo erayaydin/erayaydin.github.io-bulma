@@ -1,0 +1,145 @@
+---
+layout:     post
+title:      "PSR-1 Standartları"
+subtitle:   "Basit Kodlama Standartları"
+date:       2015-04-19 12:00:00
+author:     "Eray Aydın"
+header-img: "media/psr-1.jpg"
+---
+
+<div class="alert alert-warning">
+	Eski bir yazıyı okumaktasınız, tasarım ile ilgili bazı sorunlar oluşabilir.
+</div>
+
+## PSR-1 - Basit Kodlama Standartları
+
+Bu bölümde standart kodlama elementlerinin kullanımı sırasında yapmanız gerekenleri öğreneceksiniz.
+
+### ÖZET
+--------
+
+- PHP dosyalarınızda sadece `<?php` ve `<?=` etiketlerini kullanabilirsiniz.
+- Dosyanız kodlaması UTF-8 BOM'suz olmalıdır.
+- Dosyalarınız ya sadece deklare etmeli (sınıflar, fonksiyonlar, sabitler, vs.) yada yan-işlem yapmalıdır.(çıktı verme, .ini/.xml güncelleme vs.). Kesinlikle iki işlem için de kullanmayın.
+- Namespace ve sınıflar, PSR'ninautoloading(otomatik yükleme) sistemine uymalıdır. [PSR-0, PSR-4]
+- Sınıf isimleri baş harfi büyük olmalıdır. (Örn; BlogController, SystemLog)
+- Sınıf sabitleri tamamı büyük olmalı ve alt çizgi ile ayırılmalıdır. (Örn; DIRECTORY_SEPARATOR, DEBUG 
+- Metot isimleri, ilk harf hariç kelime başları büyük olmalıdır. (Örn; showIndex, editPost)
+
+### Dosyalar
+------------
+
+#### PHP Etiketleri
+
+PHP kodunuz `<?php ... ?>` veya `<?= ... ?>` etiketlerini kullanmalıdır.
+
+#### Karakter Kodlaması
+
+PHP dosyanızın kodlaması UTF-8 BOM'suz olmalıdır.
+
+#### Yan-İşlem
+Bir dosyanız ya sadece deklare yada yan-işlem yapmalıdır. 
+
+"Yan-işlem" derken bahsetmek istediğim, bir yapı oluştururken hem sınıf, metot, sabit deklare edip hem de kullanılmamalıdır. Dosya include yapılmalıdır.
+
+"Yan-işlem" sadece çıktı vermek değildir, ayrıca servise bağlanmak, include/require yapmak, .ini/.xml düzenlemek, exceptionlar, global ve statik değer düzenleme, dosyadan okuma veya dosyaya yazmak gibi işlemlerdir.
+
+Aşağıdaki örnek, hem deklare eden hem de yan-işlem yapan bir kod örneği.
+
+{% highlight php %}
+<?php
+// yan-işlem: ini ayarlarını düzenleme
+ini_set("error_reporting", E_ALL);
+
+// yan-işlem: dosya include etme
+include "file.php";
+
+// yan-işlem: çıktı verme
+echo "<html>\n";
+
+// deklarasyon
+function foo()
+{
+	// ...
+}
+{% endhighlight %}
+
+Aşağıdaki örnek de yan-işlem yapmayan ve deklarasyon yapan bir dosyadır.
+
+{% highlight php %}
+<?php
+// deklarasyon
+function foo()
+{
+	// ...
+}
+
+// koşula bağlı deklarasyon, yan-işlem **değildir**.
+if ( ! function_exists("bar")) {
+	function bar()
+    {
+    	// ...
+    }
+}
+{% endhighlight %}
+
+### Namespace ve Sınıf İsimleri
+-------------------------------
+
+Namespaceler ve sınıflar, PSR'nin otomatik yükleme kurallarına uymalıdır. [PSR-0, PSR-4]
+
+Bu demek oluyor ki, her sınıf kendi dosyasının içinde ve en az 1 namespace altında olmalıdır.
+
+Sınıf isimleri baş harfleri büyük tanımlanmalıdır. (Örn; StockController)
+
+PHP 5.3 ve sonrasını kullananlar normal namespace kullanabilir. Örnek olarak;
+
+{% highlight php %}
+<?php
+// PHP 5.3 ve sonrası:
+namespace Vendor\Controller;
+
+class Foo
+{
+}
+{% endhighlight %}
+
+PHP 5.2.x ve öncesini kullananlar şu şekilde kullanabilir:
+
+{% highlight php %}
+<?php
+// PHP 5.2.x ve öncesi:
+class Vendor_Controller_Foo
+{
+}
+{% endhighlight %}
+
+### Sınıf Sabitleri, Ayarlar ve Metotlar
+
+Buradaki "sınıf"tan kastım, tüm sınıflardır.(class, interface, trait)
+
+#### Sabitler
+
+Sınıf sabitleri tamamen büyük olmalıdır ve alt çizgi ile kelimeler ayrılmalıdır. Örnek olarak:
+
+{% highlight php %}
+<?php
+namespace Vendor\Controller;
+
+class Foo
+{
+    const VERSION       = '1.0';
+    const DATE_APPROVED = '2014-12-12';
+}
+{% endhighlight %}
+
+#### Ayarlar
+
+Şuan için belirlenmiş bir sabit yok. $BasHarfleriBuyuk, $ilkHarfiKucuk, veya $alt_cizgi isimlerini istediğiniz gibi kullanabilirsiniz.
+
+Fakat unutulmamalıdır ki, adlandırma kuralları makul olmalıdır. Anlaşılır bir isim seçilmelidir.
+
+
+#### Metotlar
+
+Metot isimleri ilk harfi küçük ve diğer kelime başları büyük olmalıdır. (Örn; showIndex, editPost)
