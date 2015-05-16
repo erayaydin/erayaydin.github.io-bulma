@@ -21,6 +21,7 @@ Vhost alias modülünü aktifleştirmek için Apache'nin konfigürasyon dosyası
 Modülü aktifleştirdik fakat henüz ayarlamalarını yapmadık. Bunun için `/etc/httpd/conf/mod_vhost_alias.conf` isminde bir dosya oluşturun. Dosya içeriğini aşağıdan bulabilirsiniz. İsteğinize göre yolları düzenleyebilirsiniz.
 
 ```
+
 <Virtualhost *:80>
     VirtualDocumentRoot "/srv/http/%-2+/public"
     ServerName vhosts.dev
@@ -34,6 +35,7 @@ Modülü aktifleştirdik fakat henüz ayarlamalarını yapmadık. Bunun için `/
         Allow from all
     </Directory>
 </Virtualhost>
+
 ```
 
 Bu dosyanın Apache tarafından kullanılması için `httpd.conf` dosyasının en alt satırına aşağıdaki metni girebilirsiniz.
