@@ -20,40 +20,28 @@ Vhost alias modülünü aktifleştirmek için Apache'nin konfigürasyon dosyası
 ## Modül Ayarlamaları
 Modülü aktifleştirdik fakat henüz ayarlamalarını yapmadık. Bunun için `/etc/httpd/conf/mod_vhost_alias.conf` isminde bir dosya oluşturun. Dosya içeriğini aşağıdan bulabilirsiniz. İsteğinize göre yolları düzenleyebilirsiniz.
 
-```
+~~~
 <Virtualhost *:80>
-
     VirtualDocumentRoot "/srv/http/%-2+/public"
-
     ServerName vhosts.dev
-
     ServerAlias *.dev
-
     UseCanonicalName Off
-
     ErrorLog "/srv/http/vhosts-error_log"
-
     <Directory "/srv/http/*">
-
         Options Indexes FollowSymLinks MultiViews
-
         AllowOverride All
-
         Order allow,deny
-
         Allow from all
-
     </Directory>
-
 </Virtualhost>
-```
+~~~
 
 Bu dosyanın Apache tarafından kullanılması için `httpd.conf` dosyasının en alt satırına aşağıdaki metni girebilirsiniz.
 
-```
+~~~
 # Dynamic Virtual Hosts
 Include conf/mod_vhost_alias.conf
-```
+~~~
 
 -----------------
 
@@ -74,16 +62,16 @@ Bu dökümanda Yerel DNS Server yöntemi ile yerel makineye yönlendirme yapaca�
 
 Yerel DNS server için `dnsmasq` programını kullanacağız. Paket yönetim sisteminden kurulumunu gerçekleştirebilirsiniz.
 
-```
+~~~
 yaourt -S dnsmasq
-```
+~~~
 
 Kurulumdan sonra `etc/dnsmasq.conf` dosyasını düzenleyin ve en alt satıra aşağıdaki metni girin.
 
-```
+~~~
 listen-address=127.0.0.1
 address=/.dev/127.0.0.1
-```
+~~~
 
 Son olarak makinenizin sizin DNS sunucunuzu kullanması için DNS ayarlarınızı 127.0.0.1 adresine yollamanız gerekiyor.
 
@@ -91,9 +79,9 @@ Son olarak makinenizin sizin DNS sunucunuzu kullanması için DNS ayarlarınız�
 
 Öncelikle DNS sunucunuzun doğru çalışıp çalışmadığını deneyelim.
 
-```
+~~~
 host deneme.dev
-```
+~~~
 
 Eğer sonuç 127.0.x.x şeklinde geliyorsa DNS sunucumuz çalışıyor demektir.
 
