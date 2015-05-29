@@ -81,10 +81,10 @@ PHPIniDir "C:/Localhost/PHP"
 
 **<IfModule mime_module>** kısmının içinde yer alan **AddType** listesine aşağıdaki eklemeleri yapıyoruz.
 
-```
+~~~
 AddType application/x-httpd-php .php
 AddType application/x-httpd-php-source .phps
-```
+~~~
 
 Dizinde şuan **index.html** dosyası ilk olarak açılıyor. Buna ayrıca **index.php** eklemek için, **DirectoryIndex** parametresine `index.php` ekliyoruz.
 
@@ -116,7 +116,7 @@ PHPMyAdmin kurulumda varsayılandan farklı olarak **Alias** kurulumu yapacağı
 
 `config.sample.inc.php` dosyasının ismini `config.inc.php` olarak değiştirip açıyoruz. İçindekileri silip aşağıdaki kodu kullanabilir veya gerekli düzenlemeleri teker teker yapabilirsiniz.
 
-```php
+~~~php
 <?php
 
 $i = 0;
@@ -139,13 +139,13 @@ $cfg['Servers'][$i]['user'] = 'root';
 $cfg['Servers'][$i]['password'] = 'MYSQLSIFRE';
 
 ?>
-```
+~~~
 
 Buradaki **MYSQLSIFRE** alanına MySQL kurulumu yaparken girdiğiniz şifreyi girmeniz gerekiyor.
 
 PHPMyAdmin için gerekli ayarlamaları yaptık. Dosyayı kaydedip `c:/Localhost/Apache/conf/httpd.conf` dosyasına geçiyoruz. En alt satıra aşağıdaki kodları giriyoruz.
 
-```
+~~~
 #PHPMyAdmin
 Alias /phpmyadmin "c:/Localhost/PHPMyAdmin"
 <Directory "c:/Localhost/PHPMyAdmin">
@@ -153,7 +153,7 @@ Alias /phpmyadmin "c:/Localhost/PHPMyAdmin"
     AllowOverride All
     Require all granted
 </Directory>
-```
+~~~
 
 Hangi sunucu olursa olsun sonuna `/phpmyadmin` eklendiğinde ``c:/Localhost/PHPMyAdmin` çalışacak şekilde ayarladık.
 
