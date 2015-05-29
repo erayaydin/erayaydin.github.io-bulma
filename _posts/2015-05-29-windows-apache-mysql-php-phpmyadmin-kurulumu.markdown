@@ -71,11 +71,11 @@ Apache'ye modül olarak PHP eklemek için birkaç ayar yapmamız gerekiyor. `C:/
 
 En alt satıra aşağıdaki kodları giriyoruz.
 
-```
+~~~
 #PHP5
 LoadModule php5_module "C:/Localhost/PHP/php5apache2_4.dll"
 PHPIniDir "C:/Localhost/PHP"
-```
+~~~
 
 > **php5apache2_4.dll** dosyasının olup olmadığını kontrol etmekte yarar var.
 
