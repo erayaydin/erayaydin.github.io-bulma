@@ -33,14 +33,14 @@ linklerde önceden derlenmiş `binary` dosyaları bulunur. Bunlara ihtiyacımız
 
 Yeni klasör yapımız şu şekilde oldu.
 
-```
+{% highlight bash %}
 ├─root
 ├─└ oxygine-framework
 ├───└ 3rdPartyTools
 ├───└ cmake
 ├───└ libs
 ├───└ ...
-```
+{% endhighlight %}
 
 ## SDL Kurulumu
 
@@ -53,14 +53,14 @@ değiştirin.
 
 Terminal ile `root/SDL` klasörüne erişin ve şu komutları gerçekleştirin.
 
-```bash
+{% highlight bash %}
 ./configure
 mkdir build
 cd build
 cmake ../
 make
 sudo make install
-```
+{% endhighlight %}
 
 ## Oxygine Framework'a SDL Entegre Etme
 
@@ -81,7 +81,7 @@ dosyalarını `root/oxygine-framework/libs` klasörüne taşıyın/kopyalayın.
 Kurulumu başarıyla yapıp yapmadığımızı kontrol etmek için `root/oxygine-framework/examples/Demo/proj.cmake/` klasörüne gelin ve şu komutu 
 çalıştırın.
 
-```bash
+{% highlight bash %}
 sudo chmod +x run.sh
 sudo ./run.sh
-```
+{% endhighlight %}

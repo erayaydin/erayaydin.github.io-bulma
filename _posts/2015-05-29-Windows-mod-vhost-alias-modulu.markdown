@@ -13,9 +13,9 @@ Daha önce paylaştığımız mod_vhost_alias'ın Windows ile ilgili ayarlaması
 
 Öncelikle modülü aktifleştirmek için `C:/Localhost/Apache/conf/httpd.conf` dosyasını düzenliyoruz.
 
-````
+~~~
 #LoadModule vhost_alias_module modules/mod_vhost_alias.so
-````
+~~~
 
 satırındaki `#` işaretini kaldırarak modülü aktifleştiriyoruz.
 
@@ -23,7 +23,7 @@ satırındaki `#` işaretini kaldırarak modülü aktifleştiriyoruz.
 
 Modülü aktifleştirdiğimize göre ayarlamasını yapabiliriz. Bunun için `c:/Localhost/Apache/conf/alias.conf` dosyası oluşturup düzenliyoruz. İçerisine aşağıdaki kod bloğunu giriyoruz.
 
-```
+~~~
 <Virtualhost *:80>
     VirtualDocumentRoot "c:/Webserver/%-2+/public"
     ServerName vhosts.dev
@@ -38,14 +38,14 @@ Modülü aktifleştirdiğimize göre ayarlamasını yapabiliriz. Bunun için `c:
         Allow from all
     </Directory>
 </Virtualhost>
-```
+~~~
 
 Bu ayar dosyamızın çalışması için `httpd.conf` dosyasının en altına
 
-```
+~~~
 # vHost Alias
 Include conf/alias.conf
-```
+~~~
 
 ekliyoruz.
 
@@ -53,9 +53,9 @@ ekliyoruz.
 
 Test etmek için `c:/Webserver` içerisine `deneme` ve `deneme/public` klasörlerini oluşturuyoruz. Henüz Windows'a gerekli ayarı yapmadığımız için `deneme.dev` bağlantısını `127.0.0.1` adresine yönlendirmemiz gerekiyor. Bunun için de `%windir%/system32/drivers/etc/hosts` dosyasını düzenliyoruz ve en alt satıra aşağıdakini ekliyoruz.
 
-```
+~~~
 127.0.0.1 deneme.dev
-```
+~~~
 
 Test etmek için [http://deneme.dev](http://deneme.dev) adresini kullanacağız.
 
@@ -67,9 +67,9 @@ Local DNS Server olarak [Acrylic](http://sourceforge.net/projects/acrylic/) prog
 
 En alt satıra
 
-```
+~~~
 127.0.0.1 *.dev
-```
+~~~
 
 ekliyoruz.
 

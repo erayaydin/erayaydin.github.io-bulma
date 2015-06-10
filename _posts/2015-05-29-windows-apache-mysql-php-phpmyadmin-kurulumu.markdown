@@ -116,7 +116,7 @@ PHPMyAdmin kurulumda varsayılandan farklı olarak **Alias** kurulumu yapacağı
 
 `config.sample.inc.php` dosyasının ismini `config.inc.php` olarak değiştirip açıyoruz. İçindekileri silip aşağıdaki kodu kullanabilir veya gerekli düzenlemeleri teker teker yapabilirsiniz.
 
-~~~php
+{% highlight php %}
 <?php
 
 $i = 0;
@@ -139,7 +139,7 @@ $cfg['Servers'][$i]['user'] = 'root';
 $cfg['Servers'][$i]['password'] = 'MYSQLSIFRE';
 
 ?>
-~~~
+{% endhighlight %}
 
 Buradaki **MYSQLSIFRE** alanına MySQL kurulumu yaparken girdiğiniz şifreyi girmeniz gerekiyor.
 

@@ -49,8 +49,8 @@ Bu yazıda C++ 2D oyun kütüphaneleri hakkında bilgiler vereceğim. Avantajlar
 - Kolay yayınlama (GUI ile platformlara çıkış)
 - 2D/3D desteği
 
-# Sonuç
-=======
+Sonuç
+=====
 
 Eğer mobil merkezli bir oyun yapmayı düşünüyorsanız hiç durmayın `Oxygine` kullanın.
 
