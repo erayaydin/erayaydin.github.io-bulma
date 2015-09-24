@@ -19,4 +19,4 @@ Oyunun versiyonlarını aşağıdan indirebilirsiniz.
 
 İndirme Linkleri
 
-- [Mega.co.nz](https://mega.nz/#!NZ5ghTqZ!sAe9XwjMG9SEpDA7xaI6utjV7WtHw8BjSKUdFwipbuE)
+- [Mega.co.nz](https://mega.nz/#!RdAXCLBZ!G6s91AZJ-vpRDdcUrdPDdv-ij3bbx5LHNiYZcoXfPZk)
