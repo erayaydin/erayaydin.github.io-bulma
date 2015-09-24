@@ -42,7 +42,7 @@ LFLAGS = -lSDL2
 #OBJ çalıştırılabilir dosyamızın adı olacak
 OBJ = main
 
-#This is the target that compiles our executable
+#sadece `make` kullanıldığında çalışacak olan komutumuz
 all : $(OBJS)
 	$(CC) $(OBJS) $(CFLAGS) $(LFLAGS) -o $(OBJ)
 {% endhighlight %}
