@@ -5,6 +5,7 @@ subtitle:   "İşimi oldukça hızlandırdı!"
 date:       2015-05-16 03:47:00
 author:     "Eray Aydın"
 header-img: "media/apache-sanal-sunucu.jpg"
+tags: [arch-linux]
 ---
 
 Otomatik Apache Sanal Sunucu

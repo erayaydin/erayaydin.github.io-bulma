@@ -5,6 +5,7 @@ subtitle:   "C++ 2D Game Framework - Oxygine"
 date:       2015-04-08 12:00:00
 author:     "Eray Aydın"
 header-img: "media/oxygine-framework.jpg"
+tags: [cpp]
 ---
 
 <div class="alert alert-warning">

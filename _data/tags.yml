@@ -1,2 +1,10 @@
 - slug: arch-linux
   name: Arch Linux
+- slug: sdl
+  name: SDL
+- slug: cpp
+  name: C++
+- slug: php
+  name: PHP
+- slug: html5
+  name: HTML5

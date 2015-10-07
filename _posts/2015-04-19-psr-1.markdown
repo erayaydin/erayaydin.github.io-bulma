@@ -5,6 +5,7 @@ subtitle:   "Basit Kodlama Standartları"
 date:       2015-04-19 12:00:00
 author:     "Eray Aydın"
 header-img: "media/psr-1.jpg"
+tags: [php]
 ---
 
 <div class="alert alert-warning">

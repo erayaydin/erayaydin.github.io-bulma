@@ -5,6 +5,7 @@ subtitle:   "C++ için 2D Game Framework Listesi"
 date:       2015-04-20 12:00:00
 author:     "Eray Aydın"
 header-img: "media/cpp-2d-game-frameworks.jpg"
+tags: [cpp]
 ---
 
 <div class="alert alert-warning">

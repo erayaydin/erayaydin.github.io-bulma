@@ -5,6 +5,7 @@ subtitle:   "SDL2 kurulumundan sonra bir SDL projesi oluşturuyoruz."
 date:       2015-08-24 17:52:00
 author:     "Eray Aydın"
 header-img: "media/sdl2.jpg"
+tags: [sdl]
 ---
 
 [SDL Kurulumu](http://erayaydin.me/2015/08/24/linux-sdl2-kurulumu/) yaptıktan sonra, çok basit bir düzeyde SDL projesi oluşturacağız.

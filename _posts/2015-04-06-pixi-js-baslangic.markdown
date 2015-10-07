@@ -5,6 +5,7 @@ subtitle:   "HTML5 Game Framework"
 date:       2015-04-06 12:00:00
 author:     "Eray Aydın"
 header-img: "media/pixi-js-baslangic.jpg"
+tags: [html5]
 ---
 
 <div class="alert alert-warning">

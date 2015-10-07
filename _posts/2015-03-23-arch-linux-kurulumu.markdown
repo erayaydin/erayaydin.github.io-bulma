@@ -5,6 +5,7 @@ subtitle:   "Zorlu olacak fakat buna değecek!"
 date:       2015-03-23 12:00:00
 author:     "Eray Aydın"
 header-img: "media/arch-linux-kurulumu.jpg"
+tags: [arch-linux]
 ---
 
 <div class="alert alert-warning">

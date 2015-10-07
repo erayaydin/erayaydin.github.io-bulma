@@ -5,6 +5,7 @@ subtitle:   "Paket yönetim sistemlerinden ve kaynaktan SDL2 kurulumu"
 date:       2015-08-24 01:00:00
 author:     "Eray Aydın"
 header-img: "media/sdl2.jpg"
+tags: [sdl]
 ---
 
 Linux - SDL2 Kurulumu
