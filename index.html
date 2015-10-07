@@ -14,7 +14,29 @@ description: "PHP Senior Web Developer"
         </h3>
         {% endif %}
     </a>
-    <p class="post-meta">Yazan: {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} - Tarih: {{ post.date | date: "%-d.%m.%Y" }}</p>
+    <p class="post-meta">
+        Yazan: {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} - 
+        Tarih: {{ post.date | date: "%-d.%m.%Y" }}
+        {% if post.tags.size > 0 %}
+            {% capture tags_content %}
+            - Kategoriler: 
+            {% endcapture %}
+            {% for post_tag in post.tags %}
+                {% for data_tag in site.data.tags %}
+                    {% if data_tag.slug == post_tag %}
+                        {% assign tag = data_tag %}
+                    {% endif %}
+                {% endfor %}
+                {% if tag %}
+                    {% capture tags_content_temp %}{{ tags_content }}<a href="/tag/{{ tag.slug }}">{{ tag.name }}</a>{% if forloop.last == false %}, {% endif %}{% endcapture %}
+                    {% assign tags_content = tags_content_temp %}
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            {% assign tags_content = '' %}
+        {% endif %}
+        {{ tags_content }}
+    </p>
 </div>
 <hr>
 {% endfor %}
