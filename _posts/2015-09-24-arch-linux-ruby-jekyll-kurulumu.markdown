@@ -5,6 +5,7 @@ subtitle:   "Ruby, RubyGems, Bundler, Jekyll ve GithubPages kurulumu"
 date:       2015-08-24 01:58:00
 author:     "Eray Aydın"
 header-img: "media/ruby.jpg"
+tags: [arch-linux]
 ---
 
 Arch Linux - Ruby ve Jekyll Kurulumu
