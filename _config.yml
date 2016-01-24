@@ -8,7 +8,7 @@ url: "http://erayaydin.github.io"
 twitter_username: imlinuxbitch
 github_username:  erayaydin
 facebook_username:  laravel.artisan
-disqus: erayaydinorg
+disqus_shortname: erayaydinorg
 
 # Build settings
 markdown: kramdown
