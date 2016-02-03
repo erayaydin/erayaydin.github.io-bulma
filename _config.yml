@@ -9,6 +9,7 @@ twitter_username: imlinuxbitch
 github_username:  erayaydin
 facebook_username:  laravel.artisan
 disqus_shortname: erayaydinorg
+google_analytics: UA-72941043-2
 
 # Build settings
 markdown: kramdown
