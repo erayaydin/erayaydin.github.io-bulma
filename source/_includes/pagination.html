@@ -1,0 +1,21 @@
+{% if paginator.total_pages > 1 %}
+<nav class="pagination" role="pagination">
+  <ul>
+    {% assign url = site.baseurl | append: "/blog/" %}
+    {% if paginator.previous_page %}
+      {% if paginator.previous_page > 1 %}
+        {% assign prev = 'page/' | append: paginator.previous_page %}
+      {% endif %}
+      <li><a class="prev btn btn-ghost" href="{{ url | append: prev }}" title="Yeni Makaleler">&laquo; Önceki</a></li>
+    {% else %}
+      <li><span class="prev btn btn-ghost disabled">&laquo; Önceki</span></li>
+    {% endif %}
+    <li><span class="page-number">Sayfa {{paginator.page}} / {{paginator.total_pages}}</span></li>
+    {% if paginator.next_page %}
+      <li><a class="next btn btn-ghost" href="{{ url | append: 'page/' | append: paginator.next_page }}" title="Eski Makaleler">Sonraki &raquo;</a></li>
+    {% else %}
+      <li><span class="next btn btn-ghost disabled">Sonraki &raquo;</span></li>
+    {% endif %}
+  </ul>
+</nav>
+{% endif %}

@@ -1,0 +1,6 @@
+source 'http://rubygems.org'
+
+gem 'liquid'
+gem 'redcarpet'
+gem 'github-pages'
+gem 'jekyll'

@@ -1,20 +1,54 @@
-# Site settings
-title: Eray Aydın
-header-img: media/anasayfa.jpg
-email: eray@erayaydin.me
-description: "Yazılım ve teknolojiye dair webmaster günlüğü!"
-baseurl: ""
-url: "http://erayaydin.github.io"
-twitter_username: imlinuxbitch
-github_username:  erayaydin
-facebook_username:  laravel.artisan
-disqus_shortname: erayaydinorg
-#google_analytics: UA-72941043-2
-
 # Build settings
-markdown: kramdown
-highlighter: rouge
-permalink: pretty
-paginate: 5
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-gems: [jekyll-paginate, jekyll-feed]
+permalink   : /blog/:year/:title/
+markdown    : kramdown
+highlighter : pygments
+gems: [jekyll-paginate]
+
+paginate: 3
+paginate_path: "/blog/page/:num/"
+comments: true
+
+source: source
+destination: _site
+sass:
+  sass_dir: _scss
+  style: compressed # expanded
+
+# SEO settings
+title: "Eray Aydın"
+description: "PHP Laravel Senior Developer"
+keywords: "PHP, Laravel, Development, HTML5, CSS3, Javascript, jQuery, Bootstrap, Gulp, Less, Sass"
+url: http://erayaydin.github.io
+baseurl: ""
+# baseurl: ""
+
+google_analytics: UA-52446115-1
+repo: http://github.com/erayaydin/erayaydin.github.io
+disqus_shortname: "aydineray"
+disqus_site_shortname: "aydineray"
+
+# Author settings
+author:
+  name      : Eray Aydın
+  job       : PHP Laravel Senior Developer
+  bio       : "PHP &middot; Laravel &middot; HTML5 &amp; CSS3 &middot; Javascript &middot; NodeJS &amp; Python3"
+  thumb     : /images/author.jpg
+  email     : eray@webjektif.com
+  url       : http://erayaydin.github.io
+  github    : http://github.com/erayaydin
+  twitter   : http://twitter.com/imlinuxbitch
+  facebook  : http://facebook.com/laravel.artisan
+#  linkedin  : http://linkedin.com/in/nandomoreirame
+
+# navbar pages
+navbar:
+  - slug: hakkimda
+    title: Hakkımda
+  # - slug: resume
+  #   title: Resume
+  # - slug: skills
+  #   title: Skills
+  - slug: blog
+    title: Blog
+
+exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md"]

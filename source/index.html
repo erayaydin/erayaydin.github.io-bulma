@@ -1,0 +1,21 @@
+---
+layout: home
+---
+
+<section class="hero">
+
+  <div class="hero-inner container">
+
+    <img src="{{ site.author.thumb | prepend: site.baseurl }}" alt="author thumb" class="dot">
+    <h1>{{ site.author.name }}</h1>
+    <h3>{{ site.author.job }}</h3>
+    <h3>{{ site.author.bio }}</h3>
+
+    <a href="{{ '/hakkimda' | prepend: site.baseurl }}" class="btn btn-ghost">hakkımda</a>
+    <a href="{{ '/blog' | prepend: site.baseurl }}" class="btn btn-ghost">blog</a>
+
+    {% include social.html %}
+
+  </div>
+
+</section>
