@@ -1,5 +1,7 @@
 # Eray Aydın ~ Personal Blog
 
+Personal Blog
+
 ## Base Theme
 Theme based [Clean Blog](https://github.com/IronSummitMedia/startbootstrap-clean-blog-jekyll)
 
