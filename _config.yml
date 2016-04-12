@@ -1,54 +1,34 @@
-# Build settings
-permalink   : /blog/:year/:title/
-markdown    : kramdown
-highlighter : pygments
-gems: [jekyll-paginate]
-
-paginate: 3
-paginate_path: "/blog/page/:num/"
-comments: true
-
-source: source
-destination: _site
-sass:
-  sass_dir: _scss
-  style: compressed # expanded
-
-# SEO settings
+# Site settings
 title: "Eray Aydın"
-description: "PHP Laravel Senior Developer"
-keywords: "PHP, Laravel, Development, HTML5, CSS3, Javascript, jQuery, Bootstrap, Gulp, Less, Sass"
-url: http://erayaydin.github.io
+email: turkwebdeveloper@gmail.com
+description: "Personal Blog."
 baseurl: ""
-# baseurl: ""
+url: "http://erayaydin.github.io/"
+title_description: "HTML5 CSS3 PHP Laravel NodeJS Linux C++"
+title_image: "https://scontent-ams3-1.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/10402665_381613885370832_4898829290521034419_n.jpg?oh=ea0e4d3501d85514bdeb34ac128066d5&oe=57B69D14"
+google_analytics: "UA-72941043-4"
+disqus_account: aydineray
+github_repository: https://github.com/erayaydin/erayaydin.github.io
+addthis_id: ra-570a0e3daaf721f7
+post_limit: 5
 
-google_analytics: UA-52446115-1
-repo: http://github.com/erayaydin/erayaydin.github.io
-disqus_shortname: "aydineray"
-disqus_site_shortname: "aydineray"
+# Social usernames/URLs
+twitter_username: imlinuxbitch
+github_username:  erayaydin
+linkedin_link: "#"
+google_plus_link: "#"
+stackoverflow_link: "#"
 
-# Author settings
-author:
-  name      : Eray Aydın
-  job       : PHP Laravel Senior Developer
-  bio       : "PHP &middot; Laravel &middot; HTML5 &amp; CSS3 &middot; Javascript &middot; NodeJS &amp; Python3"
-  thumb     : /images/author.jpg
-  email     : eray@webjektif.com
-  url       : http://erayaydin.github.io
-  github    : http://github.com/erayaydin
-  twitter   : http://twitter.com/imlinuxbitch
-  facebook  : http://facebook.com/laravel.artisan
-#  linkedin  : http://linkedin.com/in/nandomoreirame
+# Footer
+footer_left: "Design: <a href=\"https://twitter.com/_JacobTomlinson\">Jacob Tomlinson</a> | Development: <a href=\"https://twitter.com/imlinuxbitch\">Eray Aydın</a>"
+footer_right: "&lt;/&gt; <a href=\"https://github.com/erayaydin/erayaydin.github.io\">Github</a>'ta &nbsp;<i class=\"fa fa-github-alt\"></i>"
 
-# navbar pages
-navbar:
-  - slug: hakkimda
-    title: Hakkımda
-  # - slug: resume
-  #   title: Resume
-  # - slug: skills
-  #   title: Skills
-  - slug: blog
-    title: Blog
+# Build settings
+markdown: kramdown
 
-exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md"]
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+permalink: pretty
+exclude: [vendor]
