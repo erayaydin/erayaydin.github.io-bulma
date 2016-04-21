@@ -16,16 +16,19 @@ tags:
 Validation benzeri işlemlerden sonra hata mesajı göstermek için döndürdüğünüz sayfada hata mesajlarını göstermek için aşağıdaki kodu kullanabilirsiniz.
 
 ```php
+{% raw %}
 @if($errors->has())
 	@foreach ($errors->all() as $error)
 		<div>{{ $error }}</div>
 	@endforeach
 @endif
+{% endraw %}
 ```
 
 **Bootstrap Framework** kullanıyorsanız aşağıdaki _snippet_'i kullanabilirsiniz.
 
 ```php
+{% raw %}
 @if($errors->has())
 	<div class="alert alert-danger">
 	@foreach ($errors->all() as $error)
@@ -33,11 +36,13 @@ Validation benzeri işlemlerden sonra hata mesajı göstermek için döndürdü�
 	@endforeach
 	</div>
 @endif
+{% endraw %}
 ```
 
 **Zurb Foundation Framework** kullanıyorsanız aşağıdaki _snippet_'i kullanabilirsiniz.
 
 ```php
+{% raw %}
 @if($errors->has())
 	<div class="callout alert">
 	@foreach ($errors->all() as $error)
@@ -45,11 +50,13 @@ Validation benzeri işlemlerden sonra hata mesajı göstermek için döndürdü�
 	@endforeach
 	</div>
 @endif
+{% endraw %}
 ```
 
 **Semantic UI** kullanıyorsanız aşağıdaki _snippet_'i kullanabilirsiniz.
 
 ```php
+{% raw %}
 @if($errors->has())
 	<div class="ui negative message">
 	@foreach ($errors->all() as $error)
@@ -57,6 +64,7 @@ Validation benzeri işlemlerden sonra hata mesajı göstermek için döndürdü�
 	@endforeach
 	</div>
 @endif
+{% endraw %}
 ```
 
 **UIKit** kullanıyorsanız aşağıdaki _snippet_'i kullanabilirsiniz.
