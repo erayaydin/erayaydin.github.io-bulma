@@ -13,7 +13,7 @@ tags:
  - Validation
 ---
 
-Validation benzeri işlemlerden sonra hata mesajı göstermek için döndürdüğünüz sayfada hata mesajlarını göstermek için aşağıdaki kodu kullanabilirsiniz.
+Laravel'de `withError()` ile veya _Request Validation_ sonucu döndürdüğünüz hataları göstermek için aşağıdaki kodu kullanabilirsiniz.
 
 ```php
 {% raw %}
