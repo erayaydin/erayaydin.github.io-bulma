@@ -1,5 +1,5 @@
 _site
-node_modules
-Gemfile.lock
 .sass-cache
+.jekyll-metadata
 .idea
+bower_components

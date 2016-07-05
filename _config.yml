@@ -1,34 +1,79 @@
 # Site settings
-title: "Eray Aydın"
-email: turkwebdeveloper@gmail.com
-description: "Personal Blog."
-baseurl: ""
-url: "http://erayaydin.github.io/"
-title_description: "HTML5 CSS3 PHP Laravel NodeJS Linux C++"
-title_image: "https://scontent-ams3-1.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/10402665_381613885370832_4898829290521034419_n.jpg?oh=ea0e4d3501d85514bdeb34ac128066d5&oe=57B69D14"
-google_analytics: "UA-72941043-4"
-disqus_account: aydineray
-github_repository: https://github.com/erayaydin/erayaydin.github.io
-addthis_id: ra-570a0e3daaf721f7
-post_limit: 5
+title: Eray Aydın
+name: Eray Aydın
+email: erayaydin2016@gmail.com
+location: Konya, Turkey
+company: Labkod
+company_url: http://labkod.net
+github_url: https://github.com/erayaydin
+description: Kişisel Geliştirici Blogu
+favicon: favicon.png
+repository: erayaydin/erayaydin.github.io
+url: http://localhost:4000
 
-# Social usernames/URLs
-twitter_username: erayaydi
-github_username:  erayaydin
-linkedin_link: "#"
-google_plus_link: "#"
-stackoverflow_link: "#"
-
-# Footer
-footer_left: "Design: <a href=\"https://twitter.com/_JacobTomlinson\">Jacob Tomlinson</a> | Development: <a href=\"https://twitter.com/imlinuxbitch\">Eray Aydın</a>"
-footer_right: "&lt;/&gt; <a href=\"https://github.com/erayaydin/erayaydin.github.io\">Github</a>'ta &nbsp;<i class=\"fa fa-github-alt\"></i>"
+## Gem
+gems:
+  - jekyll-paginate
+  - jekyll-geo-pattern
+  - rouge
+  - kramdown
+  - jekyll-github-metadata
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
+lsi:         false
+excerpt_separator: "\n\n"
+
+source:      .
+destination: ./_site
+
+quiet:    false
+defaults: []
 
 kramdown:
   input: GFM
-  syntax_highlighter: rouge
+  enable_coderay: true
 
-permalink: pretty
-exclude: [vendor]
+# Disque
+disque: aydineray.disqus.com
+
+# Pagination
+paginate: 10
+paginate_path: 'page:num'
+
+# Navigation. If you do not like these modules, just remove them :D
+navs:
+  -
+    href: /
+    label: Anasayfa
+
+  -
+    href: /open-source
+    label: Açık Kaynak
+
+  -
+    href: /blog
+    label: Blog
+
+  -
+    href: /bookmark
+    label: Yerimleri
+
+  -
+    href: /about
+    label: Hakkımda
+
+# Popular Repo Limit
+side_bar_repo_limit: 5
+
+# Google Analytics
+analytics :
+  provider : google
+  google :
+      tracking_id : 'UA-72941043-4'
+
+
+# Skills!
+skill_web_keywords: [HTML5, CSS3, Javascript, jQuery, Ajax, AngularJS, NodeJS, ExpressJS, MongoDB, PHP, Symfony, Bootstrap Framework, Slim, Laravel 4.x, Laravel 5.x, Jekyll, Hugo]
+skill_software_keywords: [Java, C, C++, Gtk, Qt, Python, Go, MySQL, SQLite]
