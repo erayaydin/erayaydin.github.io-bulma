@@ -1,79 +1,193 @@
-# Site settings
-title: Eray Aydın
-name: Eray Aydın
-email: erayaydin2016@gmail.com
-location: Konya, Turkey
-company: Labkod
-company_url: http://labkod.net
-github_url: https://github.com/erayaydin
-description: Kişisel Geliştirici Blogu
-favicon: favicon.png
-repository: erayaydin/erayaydin.github.io
-url: http://localhost:4000
+# Site Settings
+locale           : "tr"
+title            : "Eray Aydın"
+title_separator  : "-"
+name             : "Eray Aydın"
+description      : "Personal Programming Blog"
+url              :
+baseurl          :
+gh_repo          :
+teaser           :
+words_per_minute : 100
+comments:
+  provider : "disqus"
+  disqus:
+    shortname : "aydineray"
 
-## Gem
-gems:
-  - jekyll-paginate
-  - jekyll-geo-pattern
-  - rouge
-  - kramdown
-  - jekyll-github-metadata
+# SEO Settings
+google_site_verification :
+bing_site_verification   :
+alexa_site_verification  :
+yandex_site_verification :
 
-# Build settings
+# Social Sharing
+twitter:
+  username : "erayaydi"
+facebook:
+  username  : "erayaydi"
+  app_id    :
+  published :
+og_image :
+social:
+  type  :
+  name  :
+  links :
+
+# Analytics
+analytics:
+  provider : "google"
+  google:
+    tracking_id : ""
+
+# Google Adsense
+google_ad_client :
+google_ad_slot   :
+
+# Site Author
+author:
+  name          : "Eray Aydın"
+  avatar        : "photo.jpg"
+  bio           : "PHP Senior Web Developer - Laravel Artisan - Archy (On Way Trust User) - Free Software Fan"
+  location      : "Konya, Turkey"
+  email         : "hello@erayaydin.org"
+  uri           :
+  bitbucket     : "erayaydin"
+  codepen       :
+  dribbble      :
+  flickr        :
+  facebook      : "erayaydi"
+  foursquare    :
+  github        : "erayaydin"
+  google_plus   :
+  keybase       :
+  instagram     : "laravel.artisan"
+  lastfm        :
+  linkedin      :
+  pinterest     :
+  soundcloud    :
+  stackoverflow :
+  steam         :
+  tumblr        : "erayaydin"
+  twitter       : "erayaydi"
+  vine          :
+  weibo         :
+  xing          :
+  youtube       :
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+exclude:
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - Rakefile
+  - README
+  - tmp
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Conversion
 markdown: kramdown
 highlighter: rouge
-lsi:         false
-excerpt_separator: "\n\n"
+lsi: false
+excerpt_separator: "\r\n"
+incremental: false
 
-source:      .
-destination: ./_site
-
-quiet:    false
-defaults: []
-
+# Markdown
 kramdown:
   input: GFM
-  enable_coderay: true
-
-# Disque
-disque: aydineray.disqus.com
-
-# Pagination
-paginate: 10
-paginate_path: 'page:num'
-
-# Navigation. If you do not like these modules, just remove them :D
-navs:
-  -
-    href: /
-    label: Anasayfa
-
-  -
-    href: /open-source
-    label: Açık Kaynak
-
-  -
-    href: /blog
-    label: Blog
-
-  -
-    href: /bookmark
-    label: Yerimleri
-
-  -
-    href: /about
-    label: Hakkımda
-
-# Popular Repo Limit
-side_bar_repo_limit: 5
-
-# Google Analytics
-analytics :
-  provider : google
-  google :
-      tracking_id : 'UA-72941043-4'
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
 
 
-# Skills!
-skill_web_keywords: [HTML5, CSS3, Javascript, jQuery, Ajax, AngularJS, NodeJS, ExpressJS, MongoDB, PHP, Symfony, Bootstrap Framework, Slim, Laravel 4.x, Laravel 5.x, Jekyll, Hugo]
-skill_software_keywords: [Java, C, C++, Gtk, Qt, Python, Go, MySQL, SQLite]
+# Collections
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
+
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: false
+      share: true
+
+# Output
+permalink: /:categories/:title/
+paginate: 5
+paginate_path: /page:num/
+timezone: "Asia/Istanbul"
+
+# Plugins
+gems:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+
+# Archives
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# HTML Compression
+compress_html:
+  clippings: all
+  ignore:
+    envs: development

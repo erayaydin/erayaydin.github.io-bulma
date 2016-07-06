@@ -1,35 +1,20 @@
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+{% include base_path %}
 
-    <!-- Favicon Icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/{{ site.favicon }}">
+<meta charset="utf-8">
 
-    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+{% include seo.html %}
 
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+<link href="{{ base_path }}/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 
-    <!-- Third-Party CSS -->
-    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/bower_components/octicons/octicons/octicons.css">
-    <link rel="stylesheet" href="/bower_components/hover/css/hover-min.css">
-    <link rel="stylesheet" href="/bower_components/primer-markdown/dist/user-content.min.css">
-    <link rel="stylesheet" href="/assets/css/syntax.css">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Theme CSS -->
-    <link rel="stylesheet" href="/assets/css/common.css">
-    <link rel="stylesheet" href="/assets/css/custom.css">
+<script>
+    document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
 
-    <!-- Layout CSS -->
-    {% for css in layout.css %}
-    <link rel="stylesheet" href="/assets/css/{{css}}">
-    {% endfor %}
+<!-- For all browsers -->
+<link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
 
-    <!-- Page CSS -->
-    {% for css in page.css %}
-    <link rel="stylesheet" href="/assets/css/{{css}}">
-    {% endfor %}
-</head>
+<meta http-equiv="cleartype" content="on">

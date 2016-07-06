@@ -1,5 +1,14 @@
-_site
-.sass-cache
-.jekyll-metadata
+### PHPStorm ###
 .idea
-bower_components
+
+### Jekyll ###
+_site/
+.sass-cache/
+.jekyll-metadata
+
+### Linux ###
+*~
+
+### Node ###
+node_modules
+npm-debug.log

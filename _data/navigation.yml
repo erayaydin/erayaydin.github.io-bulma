@@ -1,0 +1,13 @@
+main:
+  - title : "Anasayfa"
+    url   : /
+  - title : "Blog"
+    url   : /year-archive/
+  - title : "Kategoriler"
+    url   : /categories/
+  - title : "Etiketler"
+    url   : /tags/
+  - title : "Yerimleri"
+    url   : /links/
+  - title : "Portfolyo"
+    url   : /portfolio/
