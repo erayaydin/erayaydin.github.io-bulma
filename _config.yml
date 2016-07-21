@@ -37,7 +37,7 @@ social:
 analytics:
   provider : "google"
   google:
-    tracking_id : ""
+    tracking_id : "UA-81189502-1"
 
 # Google Adsense
 google_ad_client :
