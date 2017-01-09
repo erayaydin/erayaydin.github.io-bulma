@@ -59059,3 +59059,11 @@ body .mainmenu .popup:before {
 body .mainmenu .menu .container {
   position: relative;
 }
+@media (max-width: 768px) {
+  .hidden.mobile {
+    display: none !important;
+  }
+  .center-on-mobile {
+    text-align: center !important;
+  }
+}
