@@ -12904,3 +12904,7 @@ body {
     text-align: center;
   }
 }
+html,
+body {
+  min-height: 1200px;
+}
