@@ -12,7 +12,7 @@
   <body>
     <div id="accessMenu" class="sidebar sidebar-right">
       <div class="sidebar-wrap">
-        <div class="sidebar-subject">Your Subject</div>
+        <div class="sidebar-subject">Hızlı Erişim</div>
         <ul>
           <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Menu 1</a>
             <ul class="dropdown-menu">
@@ -25,54 +25,70 @@
       </div>
     </div>
     <div data-target="#accessMenu" class="sidebar-overlay"></div>
-    <header class="top-nav">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12"><a class="btn btn-default btn-home"><i class="fa fa-home"></i></a>
-            <div class="search-area hidden-sm hidden-xs">
-              <div class="input-group">
-                <input type="text" placeholder="Arama..." class="form-control">
-                <div class="input-group-btn">
-                  <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                </div>
+    <header>
+      <div class="top-nav">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12"><a href="index.html" class="btn btn-default btn-home"><i class="fa fa-home"></i></a>
+              <div class="search-area hidden-sm hidden-xs">
+                <form>
+                  <div class="input-group">
+                    <input type="text" placeholder="Arama..." class="form-control">
+                    <div class="input-group-btn">
+                      <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                    </div>
+                  </div>
+                </form>
               </div>
+              <div class="pull-right"><span class="lang-button">
+                  <button data-toggle="dropdown" type="button" class="btn btn-default"><i class="fa fa-globe btn-icon-left"></i>Türkçe</button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Türkçe</a><a href="#">English</a><a href="#">Russian</a><a href="#">EL Arabic Bom Bom</a></li>
+                  </ul></span>&nbsp;<a id="activeAccessMenu" class="btn btn-primary btn-fast"><i class="fa fa-bars btn-icon-left"></i>Hızlı Erişim</a></div>
+              <div class="clearfix"></div>
             </div>
-            <div class="pull-right"><span class="lang-button">
-                <button data-toggle="dropdown" type="button" class="btn btn-default"><i class="fa fa-globe btn-icon-left"></i>Türkçe</button>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Türkçe</a><a href="#">English</a><a href="#">Russian</a><a href="#">EL Arabic Bom Bom</a></li>
-                </ul></span>&nbsp;<a id="activeAccessMenu" class="btn btn-primary btn-fast"><i class="fa fa-bars btn-icon-left"></i>Hızlı Erişim</a></div>
-            <div class="clearfix"></div>
           </div>
         </div>
       </div>
+      <div class="header">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-12">
+              <h1 class="logo"><a href="index.html"><img src="assets/images/logo.gif"></a></h1>
+              <div class="page-title">
+                <h2><a href="index.html">Selçuk Üniversitesi</a></h2>
+                <h3><a href="index.html">Teknoloji Fakültesi</a></h3>
+                <h4><a href="index.html">Bilgisayar Mühendisliği Bölümü</a></h4>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="col-md-4 col-sm-12 page-actions">
+              <p class="text-right"><a href="#" class="btn btn-dark"><i class="fa fa-eye-slash btn-icon-left"></i>Görme Engelliler Web Sitesi</a></p>
+              <p class="text-right"><a href="#" class="btn btn-facebook"><i class="fa fa-facebook"></i></a>&nbsp;<a href="#" class="btn btn-twitter"><i class="fa fa-twitter"></i></a>&nbsp;<a href="#" class="btn btn-google"><i class="fa fa-google-plus"></i></a>&nbsp;<a href="#" class="btn btn-instagram"><i class="fa fa-instagram"></i></a>&nbsp;<a href="#" class="btn btn-linkedin"><i class="fa fa-linkedin"></i></a>&nbsp;</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" data-toggle="collapse" data-target="#main-menu" aria-expanded="false" class="navbar-toggle collapsed"><span class="sr-only">Menüyü Aç</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+          </div>
+          <div id="main-menu" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Anasayfa</a></li>
+              <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle1">Açılır Menü &nbsp;<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a>Menü 1</a></li>
+                  <li><a>Menü 2</a></li>
+                  <li><a>Menü 3</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
-    <!--nav.navbar.top-nav.navbar-static-top
-    .container
-     ul.nav.navbar-nav
-      li.active
-       a(href="#").btn.btn-default.btn-home
-        i.fa.fa-home
-     form.navbar-form.navbar-left
-      .form-group
-       input(type="text", placeholder="Arama...").form-control
-      button(type="submit").btn.btn-default
-       i.fa.fa-search
-     ul.nav.navbar-nav.navbar-right
-      li
-       a(href="javascript:;").btn.btn-default.btn-language(data-toggle="dropdown")
-        i.fa.fa-globe.btn-icon-left
-        | Türkçe
-       ul.dropdown-menu
-        li
-         a(href="#") 1
-         a(href="#") 2
-         a(href="#") 3
-      li
-       a(href="#").btn.btn-primary
-        i.fa.fa-bars.btn-icon-left
-        | Hızlı Erişim
-    -->
     <script src="./assets/js/app.js"></script>
   </body>
 </html>
