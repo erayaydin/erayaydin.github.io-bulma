@@ -1,15 +1,19 @@
 ---
-title: "Sudo Ayarları"
-categories:
-    - Arch-Linux
-    - Linux
+layout: post
+title:  "Sudo Ayarları"
+description: Sudo, yani "kullanıcı yerine yapmak", belirli kullanıcı veya gruplara root yetkisiyle komut gerçekleştirmesini sağlar.
 date: 2015-12-13 16:46:00
+tags:
+  - linux
+  - arch-linux
+categories:
+  - linux
+  - arch-linux
+slug: sudo-ayarlari
 ---
 
 Sudo, yani "kullanıcı yerine yapmak", belirli kullanıcı veya gruplara
 root yetkisiyle komut gerçekleştirmesini sağlar.
-
-{% include toc title="Başlıklar" icon="anchor" %}
 
 Sudo, `su` nun alternatifi olarak kullanılıyor. `su` dan farklı olarak,
 `root shell` açmak yerine tek komutluk `root` yetkisi sağlamaktadır.

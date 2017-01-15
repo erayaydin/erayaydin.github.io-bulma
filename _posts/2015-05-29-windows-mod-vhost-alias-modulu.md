@@ -1,14 +1,18 @@
 ---
-title: "Windows için Virtual Host Alias Modülü"
-categories:
-    - Apache
-    - Windows
+layout: post
+title:  "Windows için Virtual Host Alias Modülü"
+description: Daha önce paylaştığımız mod_vhost_alias'ın Windows ile ilgili ayarlaması.
 date: 2015-05-29 16:34:00
+tags:
+  - apache
+  - windows
+categories:
+  - apache
+  - windows
+slug: otomatik-apache-sanal-sunucu
 ---
 
 Daha önce paylaştığımız mod_vhost_alias'ın Windows ile ilgili ayarlaması.
-
-{% include toc title="Başlıklar" icon="anchor" %}
 
 > Windows 8.1 üzerinde test edilmiştir.
 

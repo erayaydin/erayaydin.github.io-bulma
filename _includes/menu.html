@@ -1,0 +1,29 @@
+<nav class="nav has-shadow">
+    <div class="container">
+        <div class="nav-left">
+            <a href="{{ '/' | relative_url }}" class="nav-item"><b>Eray AYDIN</b></a>
+        </div>
+        <div class="nav-center">
+        </div>
+        <span class="nav-toggle" id="mainMenuToggle">
+            <span></span>
+            <span></span>
+            <span></span>1
+        </span>
+        <div class="nav-right nav-menu" id="mainMenu">
+            <a href="{{ '/' | relative_url }}" class="nav-item is-tab {% if page.url == '/' %} is-active {% endif %}">Blog</a>
+            <a href="{{ 'projects' | relative_url }}" class="nav-item is-tab {% if page.permalink == '/projects/' %} is-active {% endif %}">Projeler</a>
+            <a href="{{ 'about' | relative_url }}" class="nav-item is-tab {% if page.permalink == '/about/' %} is-active {% endif %}">Hakkımda</a>
+            <span class="nav-item">
+                <a href="https://twitter.com/erayaydi" class="button">
+                    <span class="icon"><i class="fa fa-twitter"></i></span>
+                    <span>Tweet</span>
+                </a>
+                <a href="https://github.com/erayaydin/erayaydin.github.io/archive/master.zip" class="button is-primary">
+                    <span class="icon"><i class="fa fa-download"></i></span>
+                    <span>Blog'u İndir</span>
+                </a>
+            </span>
+        </div>
+    </div>
+</nav>

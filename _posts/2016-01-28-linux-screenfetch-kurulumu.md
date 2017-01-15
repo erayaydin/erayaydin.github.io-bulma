@@ -1,10 +1,13 @@
 ---
-title: "Linux - Screenfetch Kurulumu"
-categories:
-    - Linux
-tags:
-    - Screenfetch
+layout: post
+title:  "Linux - Screenfetch Kurulumu"
+description: Linux dağıtımlarının tümü için Screenfetch kurulumu
 date: 2016-01-28 16:04:00
+tags:
+  - linux
+categories:
+  - linux
+slug: linux-screenfetch-kurulumu
 ---
 
 Screenfetch'i indirin.

@@ -1,13 +1,18 @@
 ---
-title: "Linux - SDL2 Kurulumu"
-categories:
-    - Linux
-    - SDL2
-    - Game-Development
+layout: post
+title:  "Linux - SDL2 Kurulumu"
+description: Linux ortamında çeşitli paket yönetim sistemleri ve kaynaktan derleme için SDL2 kurulumu.
 date: 2015-09-24 01:00:00
+tags:
+  - linux
+  - sdl2
+  - game-development
+categories:
+  - linux
+  - sdl2
+  - game-development
+slug: linux-sdl2-kurulumu
 ---
-
-{% include toc title="Başlıklar" icon="anchor" %}
 
 ### Yum Paket Yöneticisi ile Kurulum
 

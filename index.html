@@ -1,14 +1,64 @@
 ---
-layout: archive
-author_profile: true
+layout: default
 ---
+<section class="hero is-primary">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                <a href="{{ '/' | relative_url }}">Blog</a>
+            </h1>
+            <h2 class="subtitle">
+                Code is Poetry.
+            </h2>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        {% for post in paginator.posts %}
+        <div class="card post-card">
+            {% if post.image %}
+            <div class="card-image">
+                <figure class="image is-16by9">
+                    <img src="{{ post.image | prepend: site.url }}" alt="Image">
+                </figure>
+            </div>
+            {% endif %}
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-content">
+                        <p class="title is-4">{{post.title}}</p>
+                        <p class="subtitle is-6">
+                            {% for category in post.categories %}
+                            <a href="{{ '/category/' | prepend: site.url }}{{ category }}" class="tag is-primary">{{ category }}</a>
+                            {% endfor %}
+                        </p>
+                    </div>
+                </div>
 
-{% include base_path %}
+                <div class="content">
+                    {{ post.description | markdownify }}
+                    <br>
+                    <small>{{ post.date | date: "%d.%m.%Y %H:%M" }}</small>
+                </div>
+            </div>
+            <footer class="card-footer">
+                <a href="{{post.url | prepend: site.baseurl}}" class="card-footer-item">Devamını Oku</a>
+            </footer>
+        </div>
+        {% endfor %}
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts }}</h3>
+        <hr>
 
-{% for post in paginator.posts %}
-{% include archive-single.html %}
-{% endfor %}
-
-{% include paginator.html %}
+        {% if paginator.total_pages > 1 %}
+        <nav class="pagination is-centered">
+            {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path }}" class="pagination-previous"><i class="fa fa-arrow-left"></i> &nbsp; Önceki Sayfa</a>
+            {% endif %}
+            {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path }}" class="pagination-next">Sonraki Sayfa &nbsp; <i class="fa fa-arrow-right"></i></a>
+            {% endif %}
+        </nav>
+        {% endif %}
+    </div>
+</section>

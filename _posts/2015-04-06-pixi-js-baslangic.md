@@ -1,16 +1,16 @@
 ---
-title: "Pixi.js - Başlangıç"
-categories:
-    - Javascript
-    - Game-Development
+layout: post
+title:  "Pixi.js - Başlangıç"
+description: Bu makale serisinde Pixi.js ile ilgili anlatımlar yer alacaktır.
+date:   2015-04-06 12:00:00
 tags:
-    - Pixi.js
-date: 2015-04-06 12:00:00
-header:
- teaser: posts/pixijs.png
+  - javascript
+  - game-development
+categories:
+  - javascript
+  - game-development
+slug: pixi-js-baslangic
 ---
-
-{% include toc title="Başlıklar" icon="anchor" %}
 
 Bu makale serisinde Pixi.js ile ilgili anlatımlar yer alacaktır.
 

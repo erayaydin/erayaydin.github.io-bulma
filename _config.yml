@@ -1,193 +1,33 @@
-# Site Settings
-locale           : "tr"
-title            : "Eray Aydın"
-title_separator  : "-"
-name             : "Eray Aydın"
-description      : "Personal Programming Blog"
-url              :
-baseurl          :
-gh_repo          :
-teaser           :
-words_per_minute : 75
-comments:
-  provider : "disqus"
-  disqus:
-    shortname : "aydineray"
+title: Eray AYDIN
+description: >
+  Senior Web Developer, Junior Game Developer and Archy Linux System Administrator's Development and Life Journal
+email: aydineray@mail.com
+url: "http://localhost:4000"
+twitter_username: erayaydi
+github_username:  erayaydin
 
-# SEO Settings
-google_site_verification : "8zvtTi6dW_iYu2WLf01E-hkQgFb_pb_eZaZmS6x5bqM"
-bing_site_verification   :
-alexa_site_verification  :
-yandex_site_verification :
+paginate: 2
+paginate_path: "/blog/:num/"
 
-# Social Sharing
-twitter:
-  username : "erayaydi"
-facebook:
-  username  : "erayaydi"
-  app_id    :
-  published :
-og_image :
-social:
-  type  :
-  name  :
-  links :
-
-# Analytics
-analytics:
-  provider : "google"
-  google:
-    tracking_id : "UA-81189502-1"
-
-# Google Adsense
-google_ad_client :
-google_ad_slot   :
-
-# Site Author
-author:
-  name          : "Eray Aydın"
-  avatar        : "photo.jpg"
-  bio           : "PHP Senior Web Developer - Laravel Artisan - Archy (On Way Trust User) - Free Software Fan"
-  location      : "Konya, Turkey"
-  email         : "hello@erayaydin.org"
-  uri           :
-  bitbucket     : "erayaydin"
-  codepen       :
-  dribbble      :
-  flickr        :
-  facebook      : "erayaydi"
-  foursquare    :
-  github        : "erayaydin"
-  google_plus   :
-  keybase       :
-  instagram     : "laravel.artisan"
-  lastfm        :
-  linkedin      :
-  pinterest     :
-  soundcloud    :
-  stackoverflow :
-  steam         :
-  tumblr        : "erayaydin"
-  twitter       : "erayaydi"
-  vine          :
-  weibo         :
-  xing          :
-  youtube       :
-
-# Reading Files
-include:
-  - .htaccess
-  - _pages
-exclude:
-  - .bundle
-  - .jekyll-assets-cache
-  - .sass-cache
-  - assets/js/plugins
-  - assets/js/_main.js
-  - assets/js/vendor
-  - config
-  - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
-  - LICENSE
-  - log
-  - node_modules
-  - package.json
-  - Rakefile
-  - README
-  - tmp
-keep_files:
-  - .git
-  - .svn
-encoding: "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-
-# Conversion
-markdown: kramdown
-highlighter: rouge
-lsi: false
-excerpt_separator: "\r\n"
-incremental: false
-
-# Markdown
-kramdown:
-  input: GFM
-  hard_wrap: false
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
-
-
-# Collections
 collections:
-  portfolio:
+  categories:
     output: true
-    permalink: /:collection/:path/
+    permalink: /category/:slug/
 
-
-# Defaults
 defaults:
-  # _posts
-  - scope:
+  -
+    scope:
       path: ""
-      type: posts
+      type: categories
     values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-  # _pages
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-      author_profile: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: false
-      share: true
+      layout: categories
 
-# Output
-permalink: /:categories/:title/
-paginate: 5
-paginate_path: /page:num/
-timezone: "Asia/Istanbul"
-
-# Plugins
+# Build settings
+markdown: kramdown
 gems:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
   - jekyll-feed
-  - jemoji
-
-whitelist:
   - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-
-# Archives
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
-
-# HTML Compression
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
+exclude:
+  - Gemfile
+  - Gemfile.lock
+permalink: :slug

@@ -1,0 +1,63 @@
+---
+layout: default
+title: Projects
+description: All of my projects.
+permalink: /projects/
+---
+<section class="hero is-primary">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                {{ page.title }}
+            </h1>
+            <h2 class="subtitle">
+                {{ page.description }}
+            </h2>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <div class="columns is-multiline">
+            {% for project in site.data.projects %}
+            <div class="column is-one-third">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title">{{ project.name }}</p>
+                    </header>
+                    {% if project.image %}
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="{{ project.image | absolute_url }}" alt="{{ project.name }}">
+                        </figure>
+                    </div>
+                    {% endif %}
+                    <div class="card-content">
+                        <div class="content">
+                            {{ project.description | markdownify }}
+                            {% if project.start %}
+                            <br>
+                            <small>Project Start: {{ project.start | date: "%d.%m.%Y" }}</small>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <footer class="card-footer">
+                        {% if project.wiki %}
+                        <a href="{{ project.wiki }}" class="card-footer-item"><i class="fa fa-book"></i> &nbsp; Wiki</a>
+                        {% endif %}
+                        {% if project.website %}
+                        <a href="{{ project.website }}" class="card-footer-item"><i class="fa fa-globe"></i> &nbsp; Website</a>
+                        {% endif %}
+                        {% if project.source %}
+                        <a href="{{ project.source }}" class="card-footer-item"><i class="fa fa-github"></i> &nbsp; Source</a>
+                        {% endif %}
+                        {% if project.download %}
+                        <a href="{{ project.download }}" class="card-footer-item"><i class="fa fa-cloud-download"></i> &nbsp; Download</a>
+                        {% endif %}
+                    </footer>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

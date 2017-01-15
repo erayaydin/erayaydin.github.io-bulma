@@ -1,11 +1,15 @@
 ---
-title: "Laravel - Hataları Viewde Gösterme"
-categories:
-    - Laravel
-    - PHP
-tags:
-    - Blade Template Engine
+layout: post
+title:  "Laravel - Hataları Viewde Gösterme"
+description: Laravel'de `withError()` ile veya _Request Validation_ sonucu döndürdüğünüz hataları göstermek için bu kodlardan birini kullanabilirsiniz.
 date: 2016-04-12 19:20:00
+tags:
+  - laravel
+  - php
+categories:
+  - laravel
+  - php
+slug: laravel-hatalari-viewde-gosterme
 ---
 
 Laravel'de `withError()` ile veya _Request Validation_ sonucu döndürdüğünüz hataları göstermek için aşağıdaki kodu kullanabilirsiniz.

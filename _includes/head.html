@@ -1,20 +1,35 @@
-{% include base_path %}
+<meta charset="utf-8" />
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=no" />
+<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+{% capture description %}{% if page.description %}{{ page.description }}{% elsif page.title %}{{ content | raw_content }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
+<meta name="description" content="{{ description | strip_html | condense_spaces | truncate:150 }}" />
+{% capture keywords %}{% if page.keywords %}{{ page.keywords }}{% elsif page.title %}{{""}}{% else %}{{ site.keywords }}{% endif %}{% endcapture %}
+<meta name="keywords" content="{{ keywords | strip_html | condense_spaces }}" />
 
-<meta charset="utf-8">
+<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:image" content="{{ site.url }}{% if page.og_image %}{{ page.og_image | absolute_url }}{% else %}/assets/images/og-image.jpg{% endif %}">
 
-{% include seo.html %}
+<meta name="twitter:card" content="summary">
+<meta name="twitter:url" content="{{ page.url | absolute_url }}">
+<meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta name="twitter:image" content="{{ site.url }}{% if page.og_image %}{{ page.og_image | absolute_url }}{% else %}/assets/images/og-image.jpg{% endif %}">
 
-<link href="{{ base_path }}/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+<meta content="Eray AYDIN <aydineray@mail.com>" name="author" />
 
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<script>
-    document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-</script>
-
-<!-- For all browsers -->
-<link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
-
-<meta http-equiv="cleartype" content="on">
+<link href="{{ "/assets/images/apple-touch-icon.png" | prepend: site.baseurl }}" rel="apple-touch-icon" sizes="180x180" />
+<link href="{{ "/assets/images/favicon-32x32.png" | prepend: site.baseurl }}" rel="icon" sizes="32x32" type="image/png" />
+<link href="{{ "/assets/images/favicon-16x16.png" | prepend: site.baseurl }}" rel="icon" sizes="16x16" type="image/png" />
+<link href="{{ "/assets/images/manifest.json" | prepend: site.baseurl }}" rel="manifest" />
+<link color="#5bbad5" href="{{ "/assets/images/safari-pinned-tab.svg" | prepend: site.baseurl }}" rel="mask-icon" />
+<meta content="#ffffff" name="theme-color" />
+<link href="{{ "/assets/vendor/bulma/bulma.css" | absolute_url }}" rel="stylesheet" />
+<link href="{{ "/assets/vendor/font-awesome/css/font-awesome.min.css" | absolute_url }}" rel="stylesheet" />
+<link href="{{ "/assets/stylesheets/application.css" | absolute_url }}" rel="stylesheet" />

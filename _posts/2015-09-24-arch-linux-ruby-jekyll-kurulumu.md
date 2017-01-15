@@ -1,13 +1,16 @@
 ---
-title: "Arch Linux - Ruby ve Jekyll Kurulumu"
-categories:
-    - Ruby
-    - Linux
-    - Arch-Linux
+layout: post
+title:  "Arch Linux - Ruby ve Jekyll Kurulumu"
+description: Arch Linux dağıtımı için Ruby ve Jekyll kurulumu
 date: 2015-09-24 01:58:00
+tags:
+  - linux
+  - arch-linux
+categories:
+  - linux
+  - arch-linux
+slug: arch-linux-ruby-jekyll-kurulumu
 ---
-
-{% include toc title="Başlıklar" icon="anchor" %}
 
 ## Ruby Kurulumu
 

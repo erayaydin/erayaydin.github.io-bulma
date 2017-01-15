@@ -1,0 +1,31 @@
+- name: HolyJS
+  description: Project starter for **Node.js** web applications. This project based on **Hackathon Starter**
+  start:   2017-01-12 00:00:00 +0300
+  source: https://github.com/holyjs/holyjs
+  download: "https://github.com/holyjs/holyjs/archive/master.zip"
+- name: Labkod Frontend
+  description: Frontend Development Environment - **GulpJS**, **Sass**, **BrowserSync**, **Htmlhint**
+  start:   2015-11-14 00:00:00 +0300
+  source: https://github.com/labkod/frontend
+  download: "https://github.com/labkod/frontend/archive/master.zip"
+- name: Laravel Config
+  description: Laravel JSON Config Package for **Laravel Framework 5.2**
+  start:   2016-05-30 00:00:00 +0300
+  source: https://github.com/labkod/laravel-config
+  download: "https://github.com/labkod/laravel-config/archive/master.zip"
+- name: Social Snipp
+  description: Social snippet share network for **developers**. You can create repositories and snippets.
+  start:   2016-07-15 00:00:00 +0300
+  website: "http://socialsnipp.me"
+  source: https://github.com/labkod/snipp
+  download: "https://github.com/labkod/snipp/archive/master.zip"
+- name: Phaser Project Template
+  description: Phaser Project Template - Its a ready and simple project template for your next Phaser game.
+  start:   2015-02-08 00:00:00 +0300
+  source: https://github.com/erayaydin/phaser-project
+  download: "https://github.com/erayaydin/phaser-project/archive/master.zip"
+- name: Absürt Hikayeler
+  description: Django project for course. You can create stories with everyone.
+  start:   2015-08-21 00:00:00 +0300
+  source: https://github.com/erayaydin/absurthikayeler
+  download: "https://github.com/erayaydin/absurthikayeler/archive/master.zip"
